@@ -5,14 +5,17 @@ import no.hvl.dat100.jplab11.oppgave1.*;
 
 public class Tekst extends Innlegg {
 
-	// TODO: objektvariable 
+	protected String tekst;
+	protected Innlegg innlegg;
 	
 	public Tekst () {
 		
 	}
 	
 	public Tekst(int id, String bruker, String dato, String tekst) {
-		throw new UnsupportedOperationException(TODO.constructor("Tekst"));
+		
+		innlegg = new Innlegg();
+		
 	}
 	
 	public Tekst(int id, String bruker, String dato, int likes, String tekst) {
