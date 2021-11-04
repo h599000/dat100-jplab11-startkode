@@ -36,7 +36,7 @@ public class Bilde extends Tekst {
 	public String toString() {
 		
 		String mid;
-		mid = "BILDE\n" + super. + url + "\n";
+		mid = "BILDE\n" + super.getId() + "\n" + super.getBruker() + "\n" + super.getDato() + "\n" + super.getLikes() + "\n" + super.getTekst() + "\n" + url + "\n";
 		return mid;
 		
 
