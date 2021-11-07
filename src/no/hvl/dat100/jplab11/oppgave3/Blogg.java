@@ -37,7 +37,7 @@ public class Blogg {
 	public int finnInnlegg(Innlegg innlegg) {
 		int mid = -1;
 
-		for (int i = 0; i < blogg.length; i++) {
+		for (int i = 0; i < nesteLedig; i++) {
 			if (blogg[i].erLik(innlegg)) {
 				mid = i;
 			}
@@ -47,28 +47,45 @@ public class Blogg {
 
 	public boolean finnes(Innlegg innlegg) {
 		boolean mid = false;
-		
-		for (int i = 0; i < blogg.length; i++) {
+
+		for (int i = 0; i < nesteLedig; i++) {
 			if (blogg[i].erLik(innlegg)) {
 				mid = true;
 			}
 		}
+
 		return mid;
 	}
 
 	public boolean ledigPlass() {
-		
-		
+		if (nesteLedig < blogg.length) {
+			return true;
+		} else {
+			return false;
+		}
 
 	}
 
 	public boolean leggTil(Innlegg innlegg) {
 
-		throw new UnsupportedOperationException(TODO.method());
+		if (finnes(innlegg)) {
+			return false;
+		} else {
+			blogg[nesteLedig] = innlegg;
+			nesteLedig++;
+			return true;
+		}
+
 	}
 
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method());
+		String mid;
+		mid = nesteLedig + "\n";
+		for (int i = 0; i < nesteLedig; i++) {
+			mid += blogg[i].toString();
+		}
+		return mid;
+
 	}
 
 	// valgfrie oppgaver nedenfor
