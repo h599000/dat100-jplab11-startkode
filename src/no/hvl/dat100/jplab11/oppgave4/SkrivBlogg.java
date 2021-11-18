@@ -1,7 +1,6 @@
 package no.hvl.dat100.jplab11.oppgave4;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import no.hvl.dat100.jplab11.oppgave3.*;
